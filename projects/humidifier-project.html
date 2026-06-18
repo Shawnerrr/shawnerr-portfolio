@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Closed-Loop Humidity Control System</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../index.html" class="logo">Shawn Young</a>
+
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="section">
+    <p class="eyebrow">Embedded Systems Project</p>
+    <h1>Closed-Loop Humidity Control System</h1>
+
+    <p class="about-text">
+      During my Embedded Systems coursework at NAU, I worked on a two-part humidity control project where we built both a humidifier and a desiccant dehumidifier. The overall idea was to create a system that could theoretically provide full humidity control by adding moisture when the environment was too dry and removing moisture when the environment was too humid.
+      <br><br>
+      This project gave me hands-on experience with microcontrollers, sensors, displays, relays, MOSFETs, power supplies, buck converters, fans, heaters, and physical system design. It was a good example of how embedded systems combine software, electronics, and mechanical design into one working system.
+    </p>
+
+    <br />
+
+    <h2>Project Overview</h2>
+    <p class="about-text">
+      The first part of the project was an automated humidifier. The system used a humidity sensor to read the current humidity, an OLED display to show the current humidity and setpoint, push buttons to adjust the target humidity, and a relay to switch ultrasonic atomizers on and off. The control logic used hysteresis so the atomizers would not constantly cycle on and off when the humidity was close to the setpoint.
+      <br><br>
+      The second part of the project was a desiccant dehumidifier. Instead of using a compressor or refrigeration loop, the system used desiccant material to absorb moisture from the air. A heater and fans were used to help regenerate the desiccant and move air through the system. This made the design simpler and helped support the idea of a complete humidity control system.
+      <br><br>
+      Together, the humidifier and dehumidifier showed how a microcontroller-based system could monitor humidity, compare it to a user-defined setpoint, and control external hardware to move the environment toward the desired humidity range.
+    </p>
+
+    <br />
+
+    <h2>Tools and Skills Used</h2>
+    <div class="tags">
+      <span>ESP32</span>
+      <span>Arduino</span>
+      <span>C/C++</span>
+      <span>Embedded Systems</span>
+      <span>DHT11 Sensors</span>
+      <span>OLED Display</span>
+      <span>Relay Control</span>
+      <span>MOSFET Control</span>
+      <span>PWM</span>
+      <span>Hardware Debugging</span>
+    </div>
+
+    <br />
+
+    <h2>What I Worked On</h2>
+    <p class="about-text">
+      For this project, I worked on the embedded control side as well as the physical hardware integration. I helped develop the control logic for reading humidity data, displaying the current humidity and setpoint, adjusting the setpoint with buttons, and switching external components on and off based on the measured humidity.
+      <br><br>
+      A major part of the project was figuring out how to make the electronics and physical system work together reliably. The humidifier required relay control for the atomizers, while the dehumidifier required higher-power control for the heater and fans. This meant paying attention to power requirements, grounding, component ratings, and how the microcontroller interacted with external devices.
+    </p>
+
+    <br />
+
+    <ul class="about-text">
+      <li>Built an automated humidifier using a microcontroller, humidity sensor, OLED display, push buttons, relay control, and ultrasonic atomizers.</li>
+      <li>Built a desiccant dehumidifier using humidity sensors, fans, a heater, desiccant material, MOSFET control, and buck converters.</li>
+      <li>Implemented adjustable humidity setpoints using push buttons and display feedback.</li>
+      <li>Used hysteresis to prevent rapid on/off cycling near the target humidity level.</li>
+      <li>Worked through hardware debugging involving power supplies, wiring, relay logic, and external load control.</li>
+      <li>Tested the systems by observing sensor readings, display updates, and hardware response to changing humidity conditions.</li>
+    </ul>
+
+    <br />
+
+    <h2>System Features</h2>
+    <ul class="about-text">
+      <li>Closed-loop humidity control using sensor feedback.</li>
+      <li>User-adjustable humidity setpoint.</li>
+      <li>Real-time OLED display for humidity readings and target setpoint.</li>
+      <li>Button input for increasing or decreasing the desired humidity level.</li>
+      <li>Automated humidifier activation using ultrasonic atomizers.</li>
+      <li>Automated dehumidifier behavior using desiccant material, fans, and heater control.</li>
+      <li>Power regulation using buck converters for different voltage requirements.</li>
+      <li>Hardware control using relays, MOSFETs, and PWM signals.</li>
+    </ul>
+
+    <br />
+
+    <h2>Humidifier Design</h2>
+    <p class="about-text">
+      The humidifier was designed to increase humidity when the measured humidity dropped below the target range. The system used a DHT11 sensor to measure temperature and humidity, an OLED display to show the current humidity and setpoint, two push buttons for setpoint control, and ultrasonic atomizers to produce mist.
+      <br><br>
+      The final humidifier design used an ESP32 DevKit V1, a 2-channel relay, a 5V 3A power supply, and ultrasonic atomizers. The system was designed around adjustable setpoint control and hysteresis to prevent constant switching. The final presentation showed that the system could update the display in real time and switch the atomizers at the correct humidity thresholds.
+    </p>
+
+    <br />
+
+    <div class="project-grid">
+      <article class="project-card">
+        <h3>Microcontroller</h3>
+        <p>
+          Used an ESP32 DevKit V1 to read sensor data, handle button input, update the display, and control humidifier output.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Humidity Sensing</h3>
+        <p>
+          Used a DHT11 sensor to measure humidity and temperature for feedback-based control.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Display and Input</h3>
+        <p>
+          Used a 0.96 inch OLED display and two push buttons to show readings and adjust the target humidity level.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Output Control</h3>
+        <p>
+          Used relay control to switch ultrasonic atomizers on and off based on the humidity setpoint.
+        </p>
+      </article>
+    </div>
+
+    <br />
+
+    <h2>Dehumidifier Design</h2>
+    <p class="about-text">
+      The dehumidifier was designed as the other half of the humidity control system. Instead of adding moisture, it removed moisture using desiccant material. The system used humidity sensors to monitor the air, a desiccant wheel to absorb moisture, fans to move air through the system, and a heater to help regenerate the desiccant.
+      <br><br>
+      This part of the project was more physically challenging because it required building and integrating the mechanical parts of the system. The desiccant wheel, radiator, fan layout, heater control, and air path all had to work together. The final system successfully responded to humidity changes, updated the display in real time, turned the heater on and off at the correct thresholds, and removed humidity using the desiccant wheel.
+    </p>
+
+    <br />
+
+    <div class="project-grid">
+      <article class="project-card">
+        <h3>Desiccant System</h3>
+        <p>
+          Used silica bead desiccant material to absorb moisture from the air and support continuous dehumidification.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Heater and Fans</h3>
+        <p>
+          Used a heater and fans to move air through the system and help regenerate the desiccant material.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Power System</h3>
+        <p>
+          Used a 24V 8A power supply with buck converters to provide the different voltages needed by the controller, motor, fans, and heater.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <h3>Motor and PWM Control</h3>
+        <p>
+          Used motor control and PWM signals to manage moving components and airflow behavior.
+        </p>
+      </article>
+    </div>
+
+    <br />
+
+    <h2>Project Accomplishments</h2>
+    <ul class="about-text">
+      <li>Built both a humidifier and dehumidifier as two parts of a complete humidity control concept.</li>
+      <li>Implemented adjustable humidity setpoints with real-time display feedback.</li>
+      <li>Controlled external hardware using relays, MOSFETs, and microcontroller logic.</li>
+      <li>Used hysteresis to improve control behavior and reduce unnecessary switching.</li>
+      <li>Integrated multiple voltage levels using power supplies and buck converters.</li>
+      <li>Successfully demonstrated humidity response, display updates, and controlled hardware activation.</li>
+    </ul>
+
+    <br />
+
+    <h2>What I Learned</h2>
+    <p class="about-text">
+      This project taught me that embedded systems are not just about writing code. The software can be correct, but the system can still fail if the power supply is not strong enough, the wiring is wrong, the relay logic is reversed, or the external components draw more current than expected.
+      <br><br>
+      The humidifier helped me learn more about sensor feedback, setpoint control, displays, and relay-based output control. The dehumidifier helped me learn more about higher-power control, MOSFET switching, fans, heaters, buck converters, and mechanical integration.
+      <br><br>
+      Overall, this project helped me become more comfortable building systems that connect software to real physical hardware. It also gave me a better understanding of how embedded systems can be used to monitor and control real-world environments.
+    </p>
+
+    <br />
+
+    <a href="../index.html#projects" class="btn secondary">Back to Projects</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shawn Young. All rights reserved.</p>
+  </footer>
+</body>
+</html>

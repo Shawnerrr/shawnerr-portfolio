@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8-Bit FPGA Microprocessor | Shawn Young</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../index.html" class="logo">Shawn Young</a>
+
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="section">
+    <p class="eyebrow">FPGA / SystemVerilog Project</p>
+    <h1>8-Bit FPGA Microprocessor</h1>
+
+    <p class="about-text">
+      During my Computer Engineering coursework at NAU, I worked on a multi-lab FPGA project where we built a simple 8-bit microprocessor from the ground up. This project started with smaller digital logic components and eventually became a complete processor that could fetch, decode, and execute instructions. Throughout the project, I worked with SystemVerilog, Quartus Prime, ModelSim/Questa, FPGA board testing, and processor-level design concepts.
+      <br><br>
+      This project was one of the better examples of how my computer engineering classes connected hardware and software together. Instead of only writing code, I had to think about how signals moved through registers, memory, the ALU, and the control unit on every clock cycle. It helped me better understand what is actually happening inside a processor at the hardware level.
+    </p>
+
+    <br />
+
+    <h2>Project Overview</h2>
+    <p class="about-text">
+      When we first started this project, we were not building the full processor all at once. Each lab focused on a different part of the system. We started by learning and applying SystemVerilog concepts, then moved into designing the ALU, creating memory, integrating datapaths, building the instruction fetch process, and finally completing the control unit for the full processor.
+      <br><br>
+      By the end of the project, the processor included an accumulator, instruction register, program counter, memory, ALU, datapath logic, and a finite-state-machine control unit. The processor used a custom instruction set with load, store, arithmetic, logic, shift, and jump instructions. We tested the design in simulation and prepared it for demonstration on a Cyclone V FPGA board.
+      <br><br>
+      The main challenge was making sure each part of the processor worked together correctly. Since memory reads required multiple clock cycles, the control unit had to sequence each step carefully. A small timing mistake could cause the processor to load the wrong value, increment the program counter at the wrong time, or execute an instruction incorrectly.
+    </p>
+
+    <br />
+
+    <h2>Tools and Skills Used</h2>
+    <div class="tags">
+      <span>SystemVerilog</span>
+      <span>FPGA Design</span>
+      <span>Digital Logic</span>
+      <span>Processor Design</span>
+      <span>Quartus Prime</span>
+      <span>ModelSim / Questa</span>
+      <span>Finite-State Machines</span>
+      <span>Hardware Debugging</span>
+    </div>
+
+    <br />
+
+    <h2>What I Worked On</h2>
+    <p class="about-text">
+      For this project, I worked through the major sections needed to build the processor. This included writing and testing SystemVerilog modules, connecting registers and memory, designing the ALU behavior, and understanding how the control unit drives the rest of the processor. I also used simulation waveforms to verify that the processor was moving through the correct states and producing the expected results.
+      <br><br>
+      A major part of the project was learning how to debug hardware designs. Unlike normal software, the issue was not always obvious from the code alone. I had to check timing, control signals, register values, memory output, and instruction flow to understand what the processor was doing at each clock cycle.
+    </p>
+
+    <br />
+
+    <ul class="about-text">
+      <li>Designed and tested SystemVerilog modules for processor components.</li>
+      <li>Worked with an 8-bit ALU that supported arithmetic, logic, shift, load, and jump-related operations.</li>
+      <li>Integrated memory, registers, datapaths, and control signals into a processor design.</li>
+      <li>Used a finite-state-machine control unit to handle instruction fetch and execution.</li>
+      <li>Verified processor behavior using ModelSim/Questa simulation waveforms.</li>
+      <li>Prepared the design for FPGA board demonstration using switches, push buttons, LEDs, and seven-segment displays.</li>
+    </ul>
+
+    <br />
+
+    <h2>Processor Features</h2>
+    <ul class="about-text">
+      <li>8-bit accumulator-based processor architecture.</li>
+      <li>256 x 8 memory module for instruction and data storage.</li>
+      <li>Program counter used to step through machine instructions.</li>
+      <li>Instruction register split into opcode and address/value fields.</li>
+      <li>ALU support for arithmetic, logical, and shift operations.</li>
+      <li>Conditional and unconditional jump instructions.</li>
+      <li>Control unit built as a finite-state machine.</li>
+    </ul>
+
+    <br />
+
+    <h2>Project Accomplishments</h2>
+    <ul class="about-text">
+      <li>Built a working processor design from smaller hardware modules.</li>
+      <li>Successfully connected the ALU, RAM, instruction registers, program counter, and accumulator.</li>
+      <li>Implemented instruction fetch using the program counter and memory read cycles.</li>
+      <li>Expanded the control unit to support the full instruction set.</li>
+      <li>Used simulation to verify clock-by-clock processor operation.</li>
+      <li>Gained a stronger understanding of how datapath and control logic work together inside a CPU.</li>
+    </ul>
+
+    <br />
+
+    <h2>What I Learned</h2>
+    <p class="about-text">
+      This project helped me understand processor design in a much more practical way. Before working through these labs, it was easy to think of a processor as one large complicated system. Breaking it down into smaller parts made it easier to understand how each piece contributes to the final design.
+      <br><br>
+      I learned how important timing is in digital hardware, especially when memory, registers, and control signals all depend on the clock. I also learned how useful simulation waveforms are for debugging because they let me see exactly what each signal is doing during each step of instruction fetch and execution.
+      <br><br>
+      Overall, this project gave me hands-on experience with FPGA development, SystemVerilog, digital design, and hardware-level debugging. It also gave me a better appreciation for the connection between low-level hardware and the software instructions that run on top of it.
+    </p>
+
+    <br />
+
+    <a href="../index.html#projects" class="btn secondary">Back to Projects</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Shawn Young. All rights reserved.</p>
+  </footer>
+</body>
+</html>
